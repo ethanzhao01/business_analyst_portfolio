@@ -39,7 +39,7 @@ $$Z = \text{Production Costs} + \text{Transportation Costs} + \text{Expansion Co
 ### 3. Key Constraints
 * **Demand Satisfaction ($B24:E24 >= B13:E13):** Total units received by a region must meet or exceed demand.
 * **Capacity Constraint ($F20:F23 <= J20:J23):** Total production at any factory cannot exceed its "New Capacity" (Current + Added).
-* **Binary Integrity ($I20:I23 = \text{binary}):** Expansion decisions are restricted to 0 (No) or 1 (Yes).
+* **Binary Integrity ($I20:I23 = binary):** Expansion decisions are restricted to 0 (No) or 1 (Yes).
 
 ---
 
