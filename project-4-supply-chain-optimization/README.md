@@ -11,17 +11,17 @@ The model balances **production costs**, **transportation logistics**, and **cap
 * **Tool:** Microsoft Excel
 * **Engine:** Frontline Solver (Simplex LP Algorithm)
 * **Modeling Techniques:**
-   * Linear Programming (LP) for flow optimization.
+    * Linear Programming (LP) for flow optimization.
     * Binary Integer Programming for "Go/No-Go" expansion decisions.
-    * Named Ranges for model scalability and auditability.
+    * Constraint Management (Demand satisfaction vs. Capacity limits).
 
 ---
 
 ## 📉 Problem Statement
-A global manufacturer operates four factories: **Santiago, Antwerp, Vancouver, and Nagoya**. Current capacity is insufficient to meet projected regional demand. 
+A global manufacturer operates four factories: **São Paulo, Rotterdam, Vancouver, and Shanghai**. Current capacity is insufficient to meet projected regional demand. 
 
 **The Challenge:**
-1. Which factories should be expanded to maximize ROI?
+1. Which factory expansions yield the highest network efficiency?
 2. How should production be allocated to minimize the "Total Cost of Ownership" (Production + Shipping + Expansion)?
 
 ---
@@ -29,26 +29,26 @@ A global manufacturer operates four factories: **Santiago, Antwerp, Vancouver, a
 ## 🏗️ Model Architecture
 
 ### 1. Objective Function
-Minimize $Z$, where:
+Minimize $Z$ (Cell B32), where:
 $$Z = \text{Production Costs} + \text{Transportation Costs} + \text{Expansion Costs}$$
 
 ### 2. Decision Variables
-* **Production Flows:** Quantity of units shipped from Factory $i$ to Region $j$.
-* **Expansion Decisions:** Binary variables $\{0, 1\}$ representing the decision to expand a specific factory.
+* **Production Flows ($B20:E23):** Quantity of units shipped from each factory to each region.
+* **Expansion Decisions ($I20:I23):** Binary variables {0, 1} representing the decision to expand a specific factory.
 
 ### 3. Key Constraints
-* **Demand Satisfaction:** Total units received by a region must be $\ge$ regional demand.
-* **Capacity Constraint:** Total units produced by a factory must be $\le$ (Current Capacity + Expanded Capacity).
-* **Binary Integrity:** Expansion variables must be constrained to binary (0 or 1).
+* **Demand Satisfaction ($B24:E24 \ge B13:E13):** Total units received by a region must meet or exceed demand.
+* **Capacity Constraint ($F20:F23 \le J20:J23):** Total production at any factory cannot exceed its "New Capacity" (Current + Added).
+* **Binary Integrity ($I20:I23 = \text{binary}):** Expansion decisions are restricted to 0 (No) or 1 (Yes).
 
 ---
 
 ## 🚀 Key Results & Insights
 Based on the optimization run:
 * **Optimized Total Cost:** $96,061,140.
-* **Strategic Decisions:** The model recommended expansion for **Santiago, Antwerp, and Vancouver**, while keeping **Nagoya** at current capacity.
+* **Expansion Strategy:** The model recommended expansion for **São Paulo, Rotterdam, and Vancouver**, while **Shanghai** remains at current capacity to minimize fixed costs.
 * **Service Level:** Achieved 100% demand fulfillment across all global regions.
-* **Logistics Efficiency:** Vancouver was prioritized for North American demand due to significantly lower transportation costs ($50,000 per unit vs $140,000 from Nagoya).
+* **Cost Efficiency:** Even with a $2.4M investment in expansion, the total cost is minimized by reducing high-cost transportation routes and leveraging more efficient production centers.
 
 ---
 
@@ -63,9 +63,8 @@ Based on the optimization run:
 1. Download the `supply_chain_optimization.xlsx` file.
 2. Ensure the **Solver Add-in** is enabled in Excel (**File > Options > Add-ins**).
 3. Open the file, navigate to the **Data** tab, click **Solver**, and hit **Solve**.
-4. Observe how the "Expansion Decisions" and "Production" variables update to reach the minimum total cost.
 
 ---
 
 ### 📩 Contact
-**[Your Name]** [Your LinkedIn Profile Link] | [Your Email Address]
+**[Your Name]** - [Your LinkedIn Profile] | [Your Email Address]
