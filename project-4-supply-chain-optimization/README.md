@@ -10,7 +10,8 @@ The model balances **production costs**, **transportation logistics**, and **cap
 ## 🛠️ Technical Stack
 * **Tool:** Microsoft Excel
 * **Engine:** Frontline Solver (Simplex LP Algorithm)
-* **Modeling Techniques:** * Linear Programming (LP) for flow optimization.
+* **Modeling Techniques:**
+   * Linear Programming (LP) for flow optimization.
     * Binary Integer Programming for "Go/No-Go" expansion decisions.
     * Named Ranges for model scalability and auditability.
 
