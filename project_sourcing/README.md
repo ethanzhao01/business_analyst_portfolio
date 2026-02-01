@@ -46,7 +46,7 @@ The matrix below visualizes the portfolio segmentation. **Strategic items** (top
 | **Non-Critical** | 10 | 0.27 | 0.17 | 5% |
 
 <br>
-<em>Table: Portfolio Distribution by Kraljic Quadrant.</em>
+<em>Table: Portfolio Distribution by Kraljic Quadrant </em>
     </td>
   </tr>
 </table>
