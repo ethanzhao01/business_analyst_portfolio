@@ -1,89 +1,42 @@
 # Supplier Risk & Kraljic Portfolio Analysis
 
 ## Executive Summary
-This project applies a **data-driven supplier risk assessment** using a **Multi-Criteria Decision-Making (MCDM)** model and the **Kraljic Portfolio Matrix**.  The objective is to identify sourcing concentration, supply risk exposure, and profit impact across products, enabling procurement teams to prioritize actions that improve resilience while controlling cost.
+This project implements a **data-driven supplier risk assessment** leveraging a **Multi-Criteria Decision-Making (MCDM)** model and the **Kraljic Portfolio Matrix**. The objective is to quantify sourcing concentration, supply risk exposure, and profit impact across the product catalog.
 
-The analysis shows that a **small set of Strategic products accounts for the majority of total spend**, indicating high dependency risk and the need for proactive supplier management.
+**Key Finding:** A small cluster of **Strategic products accounts for 83% of total spend**, signaling a high dependency risk that requires immediate proactive supplier management and resilience planning.
 
----
+<br>
 
 ## Business Problem
-Traditional supplier evaluations tend to focus heavily on cost, which can mask other important factors such as supply disruption risk, single-source and regional concentration, high-profit products with fragile supply bases, excess effort spent on low-impact items. The business requires a **structured and repeatable framework** to rank suppliers and products objectively, to balance cost efficiency with supply resilience, and to allocate procurement effort where it delivers the most value.
+Standard procurement evaluations often over-index on cost, creating "blind spots" in the supply chain. This analysis addresses hidden disruption risks, such as single-source dependencies, regional concentration, and high-profit products supported by fragile supply bases. The goal is to transition from reactive purchasing to a **structured, repeatable framework** that objectively balances cost efficiency with supply resilience.
 
----
+<br>
 
 ## Methodology
 
-### 1. Data Preparation
-- Supplier records defined at **Product × Region** level
-- Metrics included:
-  - Cost
-  - Lead time and variability
-  - Order volume
-  - Supply risk
-  - Profit impact
-  - Environmental impact
-  - Single-source risk
+**1. Data Preparation & Normalization**
+Supplier records were analyzed at the **Product × Region** level, incorporating financials (Cost, Profit Impact), logistics (Lead Time, Variability), and risk factors (Single-Source, ESG). To ensure comparability across disparate metrics (e.g., days vs. dollars), all continuous variables were normalized to a **0–1 scale**, while skewed distributions like volume were log-transformed.
 
-### 2. Normalization
-- All continuous variables normalized to a **0–1 scale**
-- Volume normalized to handle skewed distributions
-- Binary risks (e.g., single-source) **scaled**, not subtracted
+**2. Weighted Scoring (MCDM)**
+We calculated a composite risk and profit score using a weighted sum model. Weights were assigned based on relative business importance across cost, reliability, profit impact, and sustainability.
 
-### 3. Weighted Scoring (MCDM)
-A composite score was calculated using:
+$$\text{Weighted Score} = \sum (\text{Normalized Metric}_i \times \text{Weight}_i)$$
 
-   **Final_Weighted_Score = Σ (Normalized_Metric × Weight)**
+**3. Kraljic Segmentation**
+Final scores were aggregated to the product level using weighted averages. Products were then mapped onto the Kraljic Matrix based on their **Supply Risk Index** (X-axis) and **Profit Impact Index** (Y-axis), classifying them into Strategic, Leverage, Bottleneck, or Non-Critical categories.
 
-   Weights reflect relative business importance across cost, reliability, profit impact, and sustainability.
-
-### 4. Product-Level Aggregation
-- Supplier scores aggregated to the **product level**
-- Weighted averages used for multi-region products
-- Logical rules applied for single-region and global suppliers
-
-### 5. Kraljic Segmentation
-Products were positioned on:
-- **Supply Risk Index (X-axis)**
-- **Profit Impact Index (Y-axis)**
-
-Each product was classified into:
-- Strategic
-- Leverage
-- Bottleneck
-- Non-Critical
-
----
-
-## Skills Demonstrated
-- Supply chain and procurement analytics
-- Multi-criteria decision modeling (MCDM)
-- Data normalization and aggregation
-- Advanced Excel formulas (SUMPRODUCT, IFS, conditional logic)
-- Kraljic Portfolio Matrix application
-- Translating analysis into business decisions
-
----
+<br>
 
 ## Results
 
-### Kraljic Matrix Analysis
+The matrix below visualizes the portfolio segmentation. **Strategic items** (top-right) represent the bulk of the risk and value, while **Bottleneck items** (bottom-right) expose the organization to high operational risk despite low financial impact.
 
-The Kraljic Matrix segments products by Supply Risk and Profit Impact using weighted average indices at the product level.
-- **Strategic** items represent 83% of total spend, with both high average risk and high profit impact (0.61 / 0.61). This indicates strong dependence on a small set of critical products, making supplier stability and long-term partnerships essential.
-
-- **Bottleneck** items account for 11% of spend and exhibit moderate-to-high supply risk (0.47) with lower profit impact, suggesting the need for risk mitigation and supply assurance rather than cost optimization.
-
-- **Leverage**items show high profit impact (0.54) but low supply risk and minimal spend (1%), indicating underutilized opportunities for negotiation and consolidation.
-
-- **Non-critical** items contribute 5% of spend with low risk and low profit impact, making them suitable for transactional purchasing and process efficiency improvements.
-
-<table border="0">
+<table border="0" width="100%">
   <tr>
-    <td width="800">
-      <img width="800" alt="Kraljic Matrix Graph" src="https://github.com/user-attachments/assets/b75f6cdc-c29e-41d9-becc-28a28526ac14" />
+    <td width="70%" valign="top">
+      <img src="https://github.com/user-attachments/assets/b75f6cdc-c29e-41d9-becc-28a28526ac14" width="100%" alt="Kraljic Matrix Graph" />
     </td>
-    <td valign="middle">
+    <td width="30%" valign="middle">
 
 | Quadrant | # Items | Avg Risk | Avg Profit | % Spend |
 | :--- | ---: | ---: | ---: | ---: |
@@ -92,44 +45,39 @@ The Kraljic Matrix segments products by Supply Risk and Profit Impact using weig
 | **Bottleneck** | 8 | 0.47 | 0.30 | 11% |
 | **Non-Critical** | 10 | 0.27 | 0.17 | 5% |
 
+<br>
+<em>Table: Spend distribution by quadrant.</em>
+    </td>
   </tr>
 </table>
 
 ### Key Insights
-- Strategic products dominate spend, creating concentration risk
-- Leverage products present negotiation and cost-reduction opportunities
-- Bottleneck items have low spend but high operational sensitivity
-- Non-critical items should be simplified and automated
+* **Concentration Risk:** Strategic products dominate the budget (83% of spend). The organization is highly dependent on a small set of critical suppliers.
+* **Operational Vulnerability:** Bottleneck items have moderate-to-high risk (0.47) but low profit impact. These items often cause production stoppages disproportionate to their cost.
+* **Missed Opportunities:** Leverage items show high profit impact but low risk, yet currently account for only 1% of spend, suggesting under-utilization of negotiation power.
 
----
+<br>
 
 ## Recommendations
 
-### Strategic
-- Develop long-term supplier partnerships
-- Introduce dual sourcing where feasible
-- Actively monitor risk indicators
+Based on the quadrant analysis, the following sourcing strategies are recommended to optimize the portfolio:
 
-### Leverage
-- Increase competitive bidding
-- Consolidate volume to improve pricing power
+| Quadrant | Primary Strategy | Action Plan |
+| :--- | :--- | :--- |
+| **Strategic** | **Partnership** | Develop long-term alliances, introduce dual sourcing to mitigate dependency, and actively monitor risk indicators. |
+| **Leverage** | **Exploit** | Increase competitive bidding and consolidate volumes to maximize pricing power. |
+| **Bottleneck** | **Secure Supply** | Build safety stock buffers and proactively identify alternative suppliers to reduce operational fragility. |
+| **Non-Critical** | **Efficiency** | Standardize specifications, reduce supplier count, and automate purchasing to cut administrative costs. |
 
-### Bottleneck
-- Build safety stock or buffers
-- Identify alternative suppliers proactively
+<br>
 
-### Non-Critical
-- Standardize specifications
-- Reduce supplier count and automate purchasing
+## Skills & Tools Demonstrated
+This project demonstrates proficiency in **Supply Chain Analytics**, **MCDM Modeling**, and **Data Aggregation**. Technical execution involved advanced Excel logic (SUMPRODUCT, conditional arrays) and data normalization techniques to translate raw procurement data into actionable business intelligence.
 
----
+<br>
 
-## Next Steps / Future Enhancements
-- Sensitivity analysis on scoring weights
-- Scenario simulations (supplier failure, demand spikes)
-- Integration with BI tools (Power BI / Tableau)
-- ESG and geopolitical risk overlays
-- Time-series monitoring of supplier risk
+## Future Enhancements
+Next steps include performing sensitivity analysis on scoring weights, simulating supplier failure scenarios, and integrating time-series monitoring to track risk exposure changes over time.
 
 
 
