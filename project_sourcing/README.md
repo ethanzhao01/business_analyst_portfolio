@@ -1,81 +1,45 @@
+# Supplier Risk & Kraljic Portfolio Analysis
 
-Weights reflect relative business importance across cost, reliability, profit impact, and sustainability.
+## Executive Summary
+This project applies a **data-driven supplier risk assessment** using a **Multi-Criteria Decision-Making (MCDM)** model and the **Kraljic Portfolio Matrix**.  
+The objective is to identify sourcing concentration, supply risk exposure, and profit impact across products, enabling procurement teams to prioritize actions that improve resilience while controlling cost.
 
-### 4. Product-Level Aggregation
-- Supplier scores aggregated to the **product level**
-- Weighted averages used for multi-region products
-- Logical rules applied for single-region and global suppliers
-
-### 5. Kraljic Segmentation
-Products were positioned on:
-- **Supply Risk Index (X-axis)**
-- **Profit Impact Index (Y-axis)**
-
-Each product was classified into:
-- Strategic
-- Leverage
-- Bottleneck
-- Non-Critical
+The analysis shows that a **small set of Strategic products accounts for the majority of total spend**, indicating high dependency risk and the need for proactive supplier management.
 
 ---
 
-## Skills Demonstrated
-- Supply chain and procurement analytics
-- Multi-criteria decision modeling (MCDM)
-- Data normalization and aggregation
-- Advanced Excel formulas (SUMPRODUCT, IFS, conditional logic)
-- Kraljic Portfolio Matrix application
-- Translating analysis into business decisions
+## Business Problem
+Traditional supplier evaluations tend to focus heavily on cost, which can mask:
+- Supply disruption risk
+- Single-source and regional concentration
+- High-profit products with fragile supply bases
+- Excess effort spent on low-impact items
+
+The business requires a **structured and repeatable framework** to:
+- Rank suppliers and products objectively
+- Balance cost efficiency with supply resilience
+- Allocate procurement effort where it delivers the most value
 
 ---
 
-## Results
+## Methodology
 
-### Kraljic Portfolio Summary
+### 1. Data Preparation
+- Supplier records defined at **Product × Region** level
+- Metrics included:
+  - Cost
+  - Lead time and variability
+  - Order volume
+  - Supply risk
+  - Profit impact
+  - Environmental impact
+  - Single-source risk
 
-| Quadrant        | # of Items | Avg Risk | Avg Profit | % of Spend |
-|-----------------|-----------:|---------:|-----------:|-----------:|
-| Strategic       | 4          | 0.94     | 0.96       | 67%        |
-| Leverage        | 12         | 0.71     | 0.50       | 29%        |
-| Bottleneck      | 8          | 0.25     | 0.79       | 1%         |
-| Non-Critical    | 12         | 0.31     | 0.16       | 3%         |
+### 2. Normalization
+- All continuous variables normalized to a **0–1 scale**
+- Volume normalized to handle skewed distributions
+- Binary risks (e.g., single-source) **scaled**, not subtracted
 
-### Key Insights
-- Strategic products dominate spend, creating concentration risk
-- Leverage products present negotiation and cost-reduction opportunities
-- Bottleneck items have low spend but high operational sensitivity
-- Non-critical items should be simplified and automated
+### 3. Weighted Scoring (MCDM)
+A composite score was calculated using:
 
----
-
-## Recommendations
-
-### Strategic
-- Develop long-term supplier partnerships
-- Introduce dual sourcing where feasible
-- Actively monitor risk indicators
-
-### Leverage
-- Increase competitive bidding
-- Consolidate volume to improve pricing power
-
-### Bottleneck
-- Build safety stock or buffers
-- Identify alternative suppliers proactively
-
-### Non-Critical
-- Standardize specifications
-- Reduce supplier count and automate purchasing
-
----
-
-## Next Steps / Future Enhancements
-- Sensitivity analysis on scoring weights
-- Scenario simulations (supplier failure, demand spikes)
-- Integration with BI tools (Power BI / Tableau)
-- ESG and geopolitical risk overlays
-- Time-series monitoring of supplier risk
-
----
-
-This project demonstrates how **analytics can directly inform procurement strategy**, bridging quantitative modeling and executive decision-making.
