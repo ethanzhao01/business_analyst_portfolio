@@ -67,7 +67,7 @@ Each product was classified into:
 
 ## Results
 
-### Kraljic Matrix
+### Kraljic Matrix Analysis
 
 The Kraljic Matrix segments products by Supply Risk and Profit Impact using weighted average indices at the product level.
 - **Strategic** items represent 83% of total spend, with both high average risk and high profit impact (0.61 / 0.61). This indicates strong dependence on a small set of critical products, making supplier stability and long-term partnerships essential.
@@ -78,25 +78,21 @@ The Kraljic Matrix segments products by Supply Risk and Profit Impact using weig
 
 - **Non-critical** items contribute 5% of spend with low risk and low profit impact, making them suitable for transactional purchasing and process efficiency improvements.
 
-<p align="center">
-<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/b75f6cdc-c29e-41d9-becc-28a28526ac14" />
-</p>
+<table border="0">
+  <tr>
+    <td width="600">
+      <img width="500" height="300" alt="Kraljic Matrix Graph" src="https://github.com/user-attachments/assets/b75f6cdc-c29e-41d9-becc-28a28526ac14" />
+    </td>
+    <td valign="middle">
 
-
-
-
-### Kraljic Portfolio Summary
-
-<div align="center">
-
-| Quadrant        | # of Items | Avg Risk | Avg Profit | % of Spend |
-|-----------------|-----------:|---------:|-----------:|-----------:|
-| Strategic       | 10          | 0.61     | 0.61       | 83%        |
-| Leverage        | 8           | 0.26     | 0.54       | 1%        |
-| Bottleneck      | 8          | 0.47     | 0.30       | 11%         |
-| Non-Critical    | 10         | 0.27     | 0.17       | 5%         |
-
-</div>
+| Quadrant | # Items | Avg Risk | Avg Profit | % Spend |
+| :--- | ---: | ---: | ---: | ---: |
+| **Strategic** | 10 | 0.61 | 0.61 | 83% |
+| **Leverage** | 8 | 0.26 | 0.54 | 1% |
+| **Bottleneck** | 8 | 0.47 | 0.30 | 11% |
+| **Non-Critical** | 10 | 0.27 | 0.17 | 5% |
+  </tr>
+</table>
 
 ### Key Insights
 - Strategic products dominate spend, creating concentration risk
