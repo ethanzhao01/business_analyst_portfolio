@@ -1,0 +1,163 @@
+# Supplier Risk & Kraljic Portfolio Analysis
+
+## Executive Summary
+
+This project evaluates supplier and product sourcing risk using a **multi-criteria decision-making (MCDM) framework** combined with the **Kraljic Portfolio Matrix**.
+By integrating cost, operational reliability, profit impact, environmental impact, and sourcing concentration, the analysis identifies **where the business is most exposed** and **where procurement actions will have the greatest impact**.
+
+Results show that a **small number of strategic products account for the majority of total spend**, indicating high dependency risk and the need for proactive supplier management.
+
+---
+
+## Business Problem
+
+Procurement teams often rely on cost-focused supplier evaluations, which can obscure:
+
+* Supply disruption risk
+* Single-source and regional concentration risk
+* High-profit products with fragile supply bases
+* Over-investment in low-impact items
+
+The business needs a **structured, data-driven way** to:
+
+* Prioritize suppliers and products
+* Balance cost efficiency with resilience
+* Allocate sourcing effort where it matters most
+
+---
+
+## Methodology
+
+### 1. Data Structuring
+
+* Supplier records defined at **Product × Region** level
+* Metrics included:
+
+  * Cost
+  * Lead time & variability
+  * Order volume
+  * Supply risk
+  * Profit impact
+  * Environmental impact
+  * Single-source risk
+
+### 2. Normalization
+
+* All continuous variables normalized to a **0–1 scale**
+* Volume normalized using scaling appropriate for skewed distributions
+* Binary risks (e.g., single-source) **scaled**, not subtracted
+
+### 3. Weighted Scoring (MCDM)
+
+A composite supplier score was calculated using:
+
+```
+Final Weighted Score = Σ (Normalized Metric × Weight)
+```
+
+Weights reflect business priorities across:
+
+* Cost
+* Lead time
+* Volume
+* Supply reliability
+* Profit impact
+* Environmental impact
+* Single-source exposure
+
+### 4. Product-Level Aggregation
+
+* Supplier scores aggregated to **product level**
+* Weighted averages applied where multiple regions exist
+* Logical rules used for single-region and global suppliers
+
+### 5. Kraljic Segmentation
+
+* Products plotted on:
+
+  * **Supply Risk Index (X-axis)**
+  * **Profit Impact Index (Y-axis)**
+* Classified into:
+
+  * Strategic
+  * Leverage
+  * Bottleneck
+  * Non-Critical
+
+---
+
+## Skills Demonstrated
+
+* Supply chain risk analysis
+* Multi-criteria decision modeling (MCDM)
+* Data normalization and aggregation
+* Excel advanced formulas (SUMPRODUCT, IFS, conditional logic)
+* Portfolio segmentation (Kraljic Matrix)
+* Business interpretation of analytics results
+
+---
+
+## Results
+
+### Kraljic Portfolio Summary
+
+| Quadrant     | # of Items | Avg Risk | Avg Profit | % of Spend |
+| ------------ | ---------- | -------- | ---------- | ---------- |
+| Strategic    | 4          | 0.94     | 0.96       | 67%        |
+| Leverage     | 12         | 0.71     | 0.50       | 29%        |
+| Bottleneck   | 8          | 0.25     | 0.79       | 1%         |
+| Non-Critical | 12         | 0.31     | 0.16       | 3%         |
+
+### Key Insights
+
+* **Strategic products dominate total spend**, creating concentration and disruption risk
+* **Leverage items offer negotiation and cost-reduction opportunities**
+* **Bottleneck items have low spend but high operational sensitivity**
+* **Non-critical items consume minimal spend and should be simplified**
+
+---
+
+## Recommendations
+
+### Strategic Items
+
+* Develop long-term supplier partnerships
+* Introduce dual sourcing where feasible
+* Monitor risk indicators continuously
+
+### Leverage Items
+
+* Increase competitive bidding
+* Consolidate volume to improve pricing power
+
+### Bottleneck Items
+
+* Build safety stock or buffers
+* Identify alternative suppliers proactively
+
+### Non-Critical Items
+
+* Standardize specifications
+* Automate procurement and reduce supplier count
+
+---
+
+## Next Steps / Future Enhancements
+
+### Advanced Analytics
+
+* Sensitivity analysis on weights
+* Scenario testing (supplier failure, demand spikes)
+* Stress testing supply risk assumptions
+
+### Business Extensions
+
+* Time-series risk tracking
+* Regional geopolitical risk overlays
+* ESG risk weighting by product criticality
+
+### Tools & Visualization
+
+* Power BI or Tableau dashboard
+* Automated refresh with ERP/procurement data
+* Executive-level risk heatmaps
