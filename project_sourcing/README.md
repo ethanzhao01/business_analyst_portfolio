@@ -80,8 +80,8 @@ The Kraljic Matrix segments products by Supply Risk and Profit Impact using weig
 
 <table border="0">
   <tr>
-    <td width="600">
-      <img width="500" height="300" alt="Kraljic Matrix Graph" src="https://github.com/user-attachments/assets/b75f6cdc-c29e-41d9-becc-28a28526ac14" />
+    <td width="800">
+      <img width="800" alt="Kraljic Matrix Graph" src="https://github.com/user-attachments/assets/b75f6cdc-c29e-41d9-becc-28a28526ac14" />
     </td>
     <td valign="middle">
 
@@ -91,6 +91,7 @@ The Kraljic Matrix segments products by Supply Risk and Profit Impact using weig
 | **Leverage** | 8 | 0.26 | 0.54 | 1% |
 | **Bottleneck** | 8 | 0.47 | 0.30 | 11% |
 | **Non-Critical** | 10 | 0.27 | 0.17 | 5% |
+
   </tr>
 </table>
 
