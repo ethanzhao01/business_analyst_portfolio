@@ -74,11 +74,13 @@ The Kraljic Matrix segments products by Supply Risk and Profit Impact using weig
 
 - **Bottleneck** items account for 11% of spend and exhibit moderate-to-high supply risk (0.47) with lower profit impact, suggesting the need for risk mitigation and supply assurance rather than cost optimization.
 
-- **Leverage **items show high profit impact (0.54) but low supply risk and minimal spend (1%), indicating underutilized opportunities for negotiation and consolidation.
+- **Leverage**items show high profit impact (0.54) but low supply risk and minimal spend (1%), indicating underutilized opportunities for negotiation and consolidation.
 
 - **Non-critical** items contribute 5% of spend with low risk and low profit impact, making them suitable for transactional purchasing and process efficiency improvements.
 
+<p align="center">
 <img width="452" height="276" alt="image" src="https://github.com/user-attachments/assets/b75f6cdc-c29e-41d9-becc-28a28526ac14" />
+</p>
 
 
 
