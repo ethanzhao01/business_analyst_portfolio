@@ -79,7 +79,7 @@ The Kraljic Matrix segments products by Supply Risk and Profit Impact using weig
 - **Non-critical** items contribute 5% of spend with low risk and low profit impact, making them suitable for transactional purchasing and process efficiency improvements.
 
 <p align="center">
-<img width="452" height="276" alt="image" src="https://github.com/user-attachments/assets/b75f6cdc-c29e-41d9-becc-28a28526ac14" />
+<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/b75f6cdc-c29e-41d9-becc-28a28526ac14" />
 </p>
 
 
@@ -87,12 +87,16 @@ The Kraljic Matrix segments products by Supply Risk and Profit Impact using weig
 
 ### Kraljic Portfolio Summary
 
+<div align="center">
+
 | Quadrant        | # of Items | Avg Risk | Avg Profit | % of Spend |
 |-----------------|-----------:|---------:|-----------:|-----------:|
 | Strategic       | 10          | 0.61     | 0.61       | 83%        |
 | Leverage        | 8           | 0.26     | 0.54       | 1%        |
 | Bottleneck      | 8          | 0.47     | 0.30       | 11%         |
 | Non-Critical    | 10         | 0.27     | 0.17       | 5%         |
+
+</div>
 
 ### Key Insights
 - Strategic products dominate spend, creating concentration risk
