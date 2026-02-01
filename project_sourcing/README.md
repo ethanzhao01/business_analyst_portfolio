@@ -1,8 +1,7 @@
 # Supplier Risk & Kraljic Portfolio Analysis
 
 ## Executive Summary
-This project applies a **data-driven supplier risk assessment** using a **Multi-Criteria Decision-Making (MCDM)** model and the **Kraljic Portfolio Matrix**.  
-The objective is to identify sourcing concentration, supply risk exposure, and profit impact across products, enabling procurement teams to prioritize actions that improve resilience while controlling cost.
+This project applies a **data-driven supplier risk assessment** using a **Multi-Criteria Decision-Making (MCDM)** model and the **Kraljic Portfolio Matrix**.  The objective is to identify sourcing concentration, supply risk exposure, and profit impact across products, enabling procurement teams to prioritize actions that improve resilience while controlling cost.
 
 The analysis shows that a **small set of Strategic products accounts for the majority of total spend**, indicating high dependency risk and the need for proactive supplier management.
 
@@ -34,9 +33,9 @@ Traditional supplier evaluations tend to focus heavily on cost, which can mask o
 ### 3. Weighted Scoring (MCDM)
 A composite score was calculated using:
 
-**Final_Weighted_Score = Σ (Normalized_Metric × Weight)**
+   **Final_Weighted_Score = Σ (Normalized_Metric × Weight)**
 
-Weights reflect relative business importance across cost, reliability, profit impact, and sustainability.
+   Weights reflect relative business importance across cost, reliability, profit impact, and sustainability.
 
 ### 4. Product-Level Aggregation
 - Supplier scores aggregated to the **product level**
