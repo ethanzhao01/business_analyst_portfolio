@@ -5,6 +5,8 @@ This project implements a **data-driven supplier risk assessment** leveraging a 
 
 **Key Finding:** A core group of **Strategic products accounts for 93% of total spend**, signaling a critical dependency that requires immediate proactive supplier management and resilience planning.
 
+<img width="1238" height="609" alt="9a7f0fd8-3500-4ec8-9e31-5f8fedbe36db" src="https://github.com/user-attachments/assets/6d3f8006-7d59-4d07-a1d3-a0f313a68acf" />
+
 <br>
 
 ## Business Problem
