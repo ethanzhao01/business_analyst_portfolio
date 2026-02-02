@@ -3,7 +3,7 @@
 ## Executive Summary
 This project implements a **data-driven supplier risk assessment** leveraging a **Multi-Criteria Decision-Making (MCDM)** model and the **Kraljic Portfolio Matrix**. The objective is to quantify sourcing concentration, supply risk exposure, and profit impact across the product catalog.
 
-**Key Finding:** A small cluster of **Strategic products accounts for 83% of total spend**, signaling a high dependency risk that requires immediate proactive supplier management and resilience planning.
+**Key Finding:** A core group of **Strategic products accounts for 93% of total spend**, signaling a critical dependency that requires immediate proactive supplier management and resilience planning.
 
 <br>
 
@@ -29,32 +29,37 @@ Final scores were aggregated to the product level using weighted averages. Produ
 
 ## Results
 
-The matrix below visualizes the portfolio segmentation. **Strategic items** (top-right) represent the bulk of the risk and value, while **Bottleneck items** (bottom-right) expose the organization to high operational risk despite low financial impact.
+The matrix below visualizes the portfolio segmentation. **Strategic items** (top-right) represent the overwhelming majority of spend and value, while **Bottleneck items** expose the organization to moderate risk despite negligible financial impact.
+
+<br>
 
 <table border="0" width="100%">
   <tr>
-    <td width="70%" valign="top">
-      <img src="https://github.com/user-attachments/assets/b75f6cdc-c29e-41d9-becc-28a28526ac14" width="100%" alt="Kraljic Matrix Graph" />
+    <td width="60%" valign="top">
+      <img width="519" height="274" alt="image" src="https://github.com/user-attachments/assets/bfb19bd6-d738-4f2a-94e5-e62135663ea5" />
     </td>
-    <td width="30%" valign="middle">
+    <td width="40%" valign="middle" style="padding-left: 20px;">
 
-| Quadrant | # Items | Avg Risk | Avg Profit | % Spend |
+**Table 1: Portfolio Segmentation Summary**
+
+| Quadrant&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | # Items | Avg Profit | Avg Risk | % Spend |
 | :--- | ---: | ---: | ---: | ---: |
-| **Strategic** | 10 | 0.61 | 0.61 | 83% |
-| **Leverage** | 8 | 0.26 | 0.54 | 1% |
-| **Bottleneck** | 8 | 0.47 | 0.30 | 11% |
-| **Non-Critical** | 10 | 0.27 | 0.17 | 5% |
+| **Strategic** | 16 | 0.70 | 0.57 | 93.3% |
+| **Leverage** | 2 | 0.64 | 0.26 | 2.9% |
+| **Bottleneck** | 2 | 0.46 | 0.39 | 0.5% |
+| **Non-Critical** | 16 | 0.34 | 0.26 | 3.3% |
 
 <br>
-<em>Table: Portfolio Distribution by Kraljic Quadrant </em>
-    </td>
+<p align="center"><em>Data updated: Feb 2026</em></p>
+
   </tr>
 </table>
 
 ### Key Insights
-* **Concentration Risk:** Strategic products dominate the budget (83% of spend). The organization is highly dependent on a small set of critical suppliers.
-* **Operational Vulnerability:** Bottleneck items have moderate-to-high risk (0.47) but low profit impact. These items often cause production stoppages disproportionate to their cost.
-* **Missed Opportunities:** Leverage items show high profit impact but low risk, yet currently account for only 1% of spend, suggesting under-utilization of negotiation power.
+* **Critical Dependency:** Strategic products now account for **93.3% of spend** across 16 items. Any disruption here would have a massive financial impact, making these relationships the top priority.
+* **Low Leverage Potential:** Only 2.9% of spend sits in the "Leverage" quadrant, suggesting that opportunities for purely price-based negotiation are limited.
+* **Operational Noise:** Bottleneck items account for less than **0.5% of spend** but still carry elevated risk scores (0.39). These should be secured with safety stock to prevent disproportionate operational headaches.
+* **Tail Spend:** Non-critical items make up a significant volume count (16 items) but only 3.3% of spend, making them ideal candidates for automated purchasing.
 
 <br>
 
@@ -68,6 +73,7 @@ Based on the quadrant analysis, the following sourcing strategies are recommende
 | **Leverage** | **Exploit** | Increase competitive bidding and consolidate volumes to maximize pricing power. |
 | **Bottleneck** | **Secure Supply** | Build safety stock buffers and proactively identify alternative suppliers to reduce operational fragility. |
 | **Non-Critical** | **Efficiency** | Standardize specifications, reduce supplier count, and automate purchasing to cut administrative costs. |
+
 
 <br>
 
