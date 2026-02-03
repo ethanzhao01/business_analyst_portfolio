@@ -53,7 +53,6 @@ The matrix below visualizes the portfolio segmentation. **Strategic items** (top
 | **Non-Critical** | 16 | 0.34 | 0.26 | 3.3% |
 
 <br>
-<p align="center"><em>Data updated: Feb 2026</em></p>
 
   </tr>
 </table>
