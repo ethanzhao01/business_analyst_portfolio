@@ -47,7 +47,7 @@ Category-specific strategies:
 - **Office Supplies:** Event-driven ordering aligned with promotions  
 - **Basics:** Level-loaded replenishment for cost efficiency  
 
-
+<img width="1886" height="977" alt="0aefdda8-b6e1-4192-a4f2-3e6ae3a4384b" src="https://github.com/user-attachments/assets/b7ba75ce-ac2e-4a25-971f-93c42e51764b" />
 
 <br>
 
