@@ -32,6 +32,7 @@ Clear, quadrant-based sourcing strategies (Partnership, Exploit, Secure, Automat
 <img width="1238" height="609" alt="a42f77f5-ed52-4535-9e47-a2d50a65700a" src="https://github.com/user-attachments/assets/e5221f85-3608-429e-b859-b4313365de7c" />
 
 <br>
+<br>
 
 ## 2. Demand Forecasting & Seasonal Scenario Analysis
 
@@ -50,6 +51,7 @@ Category-specific strategies:
 <img width="1886" height="977" alt="0aefdda8-b6e1-4192-a4f2-3e6ae3a4384b" src="https://github.com/user-attachments/assets/b7ba75ce-ac2e-4a25-971f-93c42e51764b" />
 
 <br>
+<br>
 
 ## 3. Strategic Supply Chain Network Optimization (MIP)
 
@@ -65,8 +67,9 @@ Category-specific strategies:
 **Outcome:**  
 A quantified trade-off between fixed capital costs and variable operating savings, supporting data-driven network design decisions.
 
+<img width="1423" height="601" alt="Weixin Image_20260116135500_2161_4" src="https://github.com/user-attachments/assets/818c6367-3eb8-44c6-a1d3-152e9b639dcb" />
 
-
+<br>
 <br>
 
 ## Skills & Tools Demonstrated
