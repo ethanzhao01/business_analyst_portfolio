@@ -28,7 +28,7 @@ The common theme is **decision support**: translating complex data and trade-off
 **Outcome:**  
 Clear, quadrant-based sourcing strategies (Partnership, Exploit, Secure, Automate) aligned to actual risk exposure rather than intuition.
 
-📁 *Folder:* `/project_sourcing`
+📁 *Folder:* `business_analyst_portfolio/project_sourcing`
 
 <br>
 
