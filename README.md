@@ -29,6 +29,7 @@ The common theme is **decision support**: translating complex data and trade-off
 Clear, quadrant-based sourcing strategies (Partnership, Exploit, Secure, Automate) aligned to actual risk exposure rather than intuition.
 
 
+<img width="1238" height="609" alt="a42f77f5-ed52-4535-9e47-a2d50a65700a" src="https://github.com/user-attachments/assets/e5221f85-3608-429e-b859-b4313365de7c" />
 
 <br>
 
