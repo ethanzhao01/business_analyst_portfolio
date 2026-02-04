@@ -33,6 +33,8 @@ Two distinct mathematical engines were evaluated:
 * **Linear Regression:** Captures long-term growth but ignores cyclicality.
 * **Seasonal Indexing:** Calculates weights for each month based on historical deviation from the mean, specifically tailored for categories like Electronics.
 
+<br>
+
 **2. Scenario Generation (Risk Buffers)**
 Rather than providing a single "point forecast," the 2024 projection includes a **Scenario Band**. The "High Case" and "Low Case" are calculated based on the historical variance discovered during the backtesting phase, serving as a guide for Safety Stock and MOQs.
 
@@ -47,30 +49,25 @@ The chart below demonstrates the **Category Slicer** in action. The graph update
 
 <img width="731" height="426" alt="image" src="https://github.com/user-attachments/assets/a182afa3-fdbf-4b4b-8546-67a2c487812c" />
 
-| Model Comparison | Historical Error (Proxy) | 2024 Strategy |
-| --- | --- | --- |
-| **Seasonal Index** | **~4.8%** | **Primary (Recommended)** |
-| Linear Forecast | ~11.2% | Reference Only |
-
 </div>
 
-### Key Insights
+### Category Risk Profiles
 
-* **Universal Risk Exposure:** The `Stress_Test` model reveals a consistent **~115% Gap** between the Baseline Forecast and the "High Demand" scenario across all categories. This indicates that current Safety Stock policies are under-calibrated for *any* upside volatility.
-* **Electronics Fragility:** With a volatility ratio of **3.1x**, Electronics requires the largest "Buffer Zone." The model suggests a "High Case" inventory build starting in **August** to meet the November peak.
-* **Promo Sensitivity (Office):** Unlike the smooth seasonality of Electronics, Office Supplies shows sharp, isolated spikes (e.g., "Spring Promo"). The forecast model separates these as "Event Drivers" rather than organic trend.
+| Category | Volatility (Max/Min) | 2024 Strategy |
+| :--- | :---: | :--- |
+| <br> **Electronics** <br><br> | <br> **High (3.1x)** <br><br> | <br> **Chase Strategy:** Build inventory 90-days pre-peak to cover +115% gap. <br><br> |
+| <br> **Office** <br><br> | <br> Medium (2.3x) <br><br> | <br> **Event-Based:** Align orders specifically with Spring/Fall promo calendars. <br><br> |
+| <br> **Basics** <br><br> | <br> Steady (2.1x) <br><br> | <br> **Level-Load:** Maintain steady production to optimize unit costs. <br><br> |
 
 <br>
+<p align="center">
+  </tr>
+</table>
 
-## Recommendations
-
-Based on the 2024 forecast, the following actions are recommended:
-
-| Category | Forecast Behavior | Procurement Action |
-| --- | --- | --- |
-| **Electronics** | **High Volatility** | Capacitize Suppliers: Reserve "High Case" capacity for Q4 now to avoid expedited air freight later. |
-| **Office** | **Promo-Driven** | Spot Buys: Use the "Spring Promo" flag to trigger one-off spot buys rather than increasing permanent safety stock. |
-| **Basics** | **Growth Trend** | Contract Negotiation: Leverage the steady growth volume to negotiate long-term cost reductions. |
+### Key Insights
+* **Universal Risk Exposure:** The Stress_Test model reveals a consistent **~115% Gap** between the Baseline Forecast and the "High Demand" scenario across all categories. This indicates that current Safety Stock policies are under-calibrated for *any* upside volatility.
+* **Electronics Fragility:** With a volatility ratio of **3.1x**, Electronics requires the largest "Buffer Zone." The model suggests a "High Case" inventory build starting in **August** to meet the November peak.
+* **Promo Sensitivity (Office):** Unlike the smooth seasonality of Electronics, Office Supplies shows sharp, isolated spikes (e.g., "Spring Promo"). The forecast model separates these as "Event Drivers" rather than organic trend.
 
 <br>
 
