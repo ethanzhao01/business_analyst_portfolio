@@ -28,7 +28,7 @@ The common theme is **decision support**: translating complex data and trade-off
 **Outcome:**  
 Clear, quadrant-based sourcing strategies (Partnership, Exploit, Secure, Automate) aligned to actual risk exposure rather than intuition.
 
-📁 *Folder:* `business_analyst_portfolio/project_sourcing`
+
 
 <br>
 
@@ -46,7 +46,7 @@ Category-specific strategies:
 - **Office Supplies:** Event-driven ordering aligned with promotions  
 - **Basics:** Level-loaded replenishment for cost efficiency  
 
-📁 *Folder:* `/project_forecasting`
+
 
 <br>
 
@@ -64,7 +64,7 @@ Category-specific strategies:
 **Outcome:**  
 A quantified trade-off between fixed capital costs and variable operating savings, supporting data-driven network design decisions.
 
-📁 *Folder:* `/project_optimization`
+
 
 <br>
 
